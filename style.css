@@ -1,0 +1,406 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e6f0ff, #f9fbff);
+    min-height: 100vh;
+}
+
+/* =====================
+   LOGIN PAGE
+===================== */
+.login-box {
+    width: 360px;
+    background: white;
+    padding: 35px;
+    margin: 120px auto;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #007bff;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #0056d2);
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+/* =====================
+   MAIN LAYOUT
+===================== */
+.container {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+/* =====================
+   SIDEBAR (BRANCHES)
+===================== */
+.sidebar {
+    width: 230px;
+    background: #ffffff;
+    padding: 25px 15px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #007bff, #0056d2);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* =====================
+   CONTENT AREA
+===================== */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* =====================
+   ADD / EDIT FORM
+===================== */
+.form {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form h3 {
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.form input,
+.form select {
+    width: calc(25% - 12px);
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: #007bff;
+}
+
+.form button {
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* =====================
+   BRANCH SECTION
+===================== */
+.branch {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.branch h3 {
+    margin-bottom: 15px;
+    color: #1e3c72;
+}
+
+/* =====================
+   TABLE DESIGN
+===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+thead {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #f4f7ff;
+}
+
+tbody tr:hover {
+    background: #eaf1ff;
+}
+
+/* =====================
+   ACTION BUTTONS
+===================== */
+button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b52a37;
+}
+
+/* =====================
+   RESPONSIVE (OPTIONAL)
+===================== */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form input,
+    .form select {
+        width: 100%;
+    }
+}
+
+
+/* =====================
+   RIBBON BAR
+===================== */
+.ribbon {
+    display: flex;
+    gap: 15px;
+    padding: 15px 25px;
+    background: #f1f5ff;
+    border-bottom: 1px solid #dbe4ff;
+}
+
+.ribbon button {
+    padding: 10px 18px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.ribbon button:hover {
+    box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+}
+
+/* =====================
+   RIBBON CONTENT
+===================== */
+.ribbon-content {
+    padding: 20px 30px;
+}
+
+.ribbon-panel {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+/* =====================
+   ADVANCED RIBBON BAR
+===================== */
+
+.ribbon-advanced {
+    background: linear-gradient(135deg, #f7f9ff, #eef2ff);
+    border-bottom: 1px solid #dbe4ff;
+}
+
+/* TABS */
+.ribbon-tabs {
+    display: flex;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.ribbon-tabs .tab {
+    padding: 10px 22px;
+    border-radius: 20px;
+    background: #e0e7ff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.ribbon-tabs .tab.active {
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    color: white;
+}
+
+/* PANELS */
+.ribbon-panel-adv {
+    display: none;
+    padding: 15px 25px;
+    animation: slideDown 0.3s ease;
+}
+
+.ribbon-panel-adv.active {
+    display: flex;
+    gap: 30px;
+}
+
+/* GROUP */
+.ribbon-group {
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.ribbon-group h4 {
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+.ribbon-group button {
+    display: block;
+    width: 180px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.ribbon-group button:hover {
+    box-shadow: 0 6px 15px rgba(59,130,246,0.5);
+}
+
+/* ANIMATION */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.profile-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+    padding: 25px;
+    transition: 0.3s;
+    z-index: 999;
+}
+.profile-drawer.open {
+    right: 0;
+}
+.profile-drawer{
+position:fixed;top:0;right:-400px;width:350px;height:100%;
+background:#fff;box-shadow:-5px 0 15px rgba(0,0,0,.2);
+padding:20px;transition:.3s;z-index:999
+}
+.profile-drawer.open{right:0}

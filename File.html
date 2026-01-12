@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-box" id="loginBox">
+    <h2>STUDENT MANAGEMENT SYSTEM</h2>
+    <input type="text" id="adminId" placeholder="STUDENT MANAGEMENT SYSTEM">
+    <input type="password" id="adminPass" placeholder="Password">
+    <p class="error" id="errorMsg"></p>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- MAIN SITE -->
+<div id="mainSite" style="display:none;">
+
+    <div class="navbar">
+        <h2>Student Management System – IIST</h2>
+    </div>
+
+    <!-- RIBBON -->
+    <div class="ribbon-advanced">
+        <div class="ribbon-tabs">
+            <button class="tab active">Home</button>
+            <button class="tab"
+                onclick="window.open('live-attendance.html','_blank')">
+                🟢 Live Attendance
+            </button>
+            <button class="tab" onclick="exportAttendance()">📤 Export Excel</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h3>Branches</h3>
+            <button onclick="showBranch('cse')">CSE</button>
+            <button onclick="showBranch('it')">IT</button>
+            <button onclick="showBranch('iot')">IOT</button>
+            <button onclick="showBranch('ds')">DS</button>
+            <button onclick="showBranch('aiml')">AIML</button>
+            <button onclick="showBranch('ece')">ECE</button>
+            <button onclick="showBranch('me')">ME</button>
+            <button onclick="showBranch('chemical')">Chemical</button>
+            <button onclick="showBranch('civil')">Civil</button>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- FORM -->
+            <div class="form">
+                <h3>Add / Update Student</h3>
+                <input id="roll" placeholder="Roll No">
+                <input id="name" placeholder="Name">
+                <input id="attendance" type="number" placeholder="Attendance %" min="0" max="100">
+                <select id="branch">
+                    <option value="cse">CSE</option>
+                    <option value="it">IT</option>
+                    <option value="iot">IOT</option>
+                    <option value="ds">DS</option>
+                    <option value="aiml">AIML</option>
+                    <option value="ece">ECE</option>
+                    <option value="me">ME</option>
+                    <option value="chemical">Chemical</option>
+                    <option value="civil">Civil</option>
+                </select>
+                <button id="submitBtn" onclick="addStudent()">Add Student</button>
+            </div>
+
+            <!-- TABLES -->
+            <div id="tables">
+                <div class="branch" id="cse"><h3>CSE</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="cseTable"></tbody></table></div>
+                <div class="branch" id="it"><h3>IT</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="itTable"></tbody></table></div>
+                <div class="branch" id="iot"><h3>IOT</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="iotTable"></tbody></table></div>
+                <div class="branch" id="ds"><h3>DS</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="dsTable"></tbody></table></div>
+                <div class="branch" id="aiml"><h3>AIML</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="aimlTable"></tbody></table></div>
+                <div class="branch" id="ece"><h3>ECE</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="eceTable"></tbody></table></div>
+                <div class="branch" id="me"><h3>ME</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="meTable"></tbody></table></div>
+                <div class="branch" id="chemical"><h3>Chemical</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="chemicalTable"></tbody></table></div>
+                <div class="branch" id="civil"><h3>Civil</h3><table><thead><tr><th>Roll</th><th>Name</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="civilTable"></tbody></table></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

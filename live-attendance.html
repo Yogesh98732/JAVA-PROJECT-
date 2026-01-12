@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Live Attendance Dashboard</h2>
+</div>
+
+<div class="content">
+
+    <div class="form">
+        <h3>Attendance Summary</h3>
+        <p id="stats"></p>
+    </div>
+
+    <div class="branch" style="display:block;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch</th>
+                    <th>Roll</th>
+                    <th>Name</th>
+                    <th>Attendance %</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="liveAttendanceBody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+    loadLiveAttendance();
+    window.addEventListener("focus", loadLiveAttendance);
+</script>
+</body>
+</html>
